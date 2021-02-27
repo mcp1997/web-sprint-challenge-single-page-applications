@@ -3,7 +3,9 @@ import { Route, useHistory } from 'react-router-dom'
 import formSchema from './components/FormSchema'
 import * as yup from 'yup'
 import axios from 'axios'
+import './App.css'
 
+import Header from './components/Header'
 import Home from './components/Home'
 import PizzaForm from './components/PizzaForm'
 import { sampleOrder } from './components/SampleOrder'
@@ -55,6 +57,9 @@ const App = () => {
   const history = useHistory()
   const routeToForm = () => {
     history.push('/pizza')
+  }
+  const routeHome = () => {
+    history.push('/')
   }
 
   // post request
@@ -127,9 +132,10 @@ const App = () => {
 
   return (
     <div>
+      <Header home={routeHome} form={routeToForm} />
 
       <Route exact path='/'>
-        <Home route={routeToForm} />
+        <Home form={routeToForm} />
       </Route>
 
       <Route path='/pizza'>

@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
+/* * {
+  border: 1px solid black;
+} */
+
+.header {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.links {
+  display: flex;
+  width: 32%;
+  justify-content: space-evenly;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.links div {
+  padding: 2%;
+  font-size:large;
+  background:#f7bd01;
+  color: white;
+  font-weight:bold;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.links div:hover {
+  cursor: pointer;
+  color: red;
+}
+
+.home-container {
   display: flex;
   flex-direction: column;
+  width: 80%;
+  margin: 2% auto;
+  text-align: center;
+  height: 50vh;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-image: url(https://media.istockphoto.com/vectors/vector-seamless-pattern-of-black-and-white-pizza-vector-id1142653274?b=1&k=6&m=1142653274&s=612x612&w=0&h=UcAd6onrNLGjG0cUQ_uDwy2GX6-aDXtjQa0kuetLL70=)
+}
+
+.home-container button {
+  padding: 1%;
+  font-size:large;
+  background:#f7bd01;
   color: white;
+  font-weight:bold;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.home-container button:hover {
+  cursor: pointer;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-page {
+  width: 80%;
+  margin: 1% auto;
+}
+
+.form-header {
+  background-image: url(https://media.istockphoto.com/vectors/vector-seamless-pattern-of-black-and-white-pizza-vector-id1142653274?b=1&k=6&m=1142653274&s=612x612&w=0&h=UcAd6onrNLGjG0cUQ_uDwy2GX6-aDXtjQa0kuetLL70=);
+  text-align: center;
+  margin-bottom: 1%;
+  padding: 1% 0;
+}
+
+.form-container h3, h4 {
+  background: lightgrey;
+  padding: 1%;
+}
+
+.form-container p {
+  margin-top: -30px;
+  padding-left: 1%;
+  font-size:small;
+  background: lightgrey;
+  padding-bottom: 1%;
+}
+
+.form-container input {
+  margin-left: 1%;
+}
+.form-container select {
+  margin-left: 1%;
+}
+.form-container label {
+  margin-left: 1%;
+}
+
+.toppings {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 25vh;
+  margin-bottom: -2%;
+}
+
+.toppings label {
+  height: 12%;
+}
+
+#special {
+  width: 97%;
+  margin: 0 0 2.5% 1%;
+}
+
+.form-footer {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2% 0;
+}
+
+.form-footer span {
+  display: flex;
+  align-items: center;
+  padding-bottom: .5%;
+  margin-right: -50px;
+}
+
+.add-to-order {
+  display: flex;
+  width: 75%;
+  font-size:large;
+  background:#f7bd01;
+  color: white;
+  font-weight:bold;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px;
+}
+
+.add-to-order p {
+  width: 75%;
+  padding: 1% 0;
+  margin: 0 auto;
+  background:#f7bd01;
+  font-size: large;
+}
+
+.add-to-order:hover{
+  color:red;
+  cursor:pointer;
+}
+
+.errors {
+  color: red;
+  font-weight:bold;
+  padding: 1%;
 }

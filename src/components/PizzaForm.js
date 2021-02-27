@@ -186,20 +186,20 @@ export default function PizzaForm(props) {
               checked={values.threeCheese}
             />
           </label>
-          <label>Pineapple ($100 extra)
-            <input
-              type='checkbox'
-              name='pineapple'
-              onChange={onChange}
-              checked={values.pineapple}
-            />
-          </label>
           <label>Extra Cheese
             <input
               type='checkbox'
               name='extraCheese'
               onChange={onChange}
               checked={values.extraCheese}
+            />
+          </label>
+          <label>Pineapple ($100 extra)
+            <input
+              type='checkbox'
+              name='pineapple'
+              onChange={onChange}
+              checked={values.pineapple}
             />
           </label>
         </div>
@@ -217,6 +217,7 @@ export default function PizzaForm(props) {
 
         <h4>Special Instructions</h4>
         <input
+          id='special'
           type='text'
           name='specialInstructions'
           onChange={onChange}
@@ -231,6 +232,7 @@ export default function PizzaForm(props) {
         </div>
 
         <div className='form-footer'>
+          <span>Qty:</span>
           <input
             type='number'
             name='quantity'
@@ -240,10 +242,10 @@ export default function PizzaForm(props) {
             max='10'
           />
 
-          <div className='add-to-order' onClick={onSubmit} disabled={disabled}>
-            <p>Add to Order</p>
-            <p>$19.99</p>
-          </div>
+          <button className='add-to-order' onClick={onSubmit} disabled={disabled}>
+              <p>Add to Order</p>
+              <p>$19.99</p>
+          </button>
         </div>
       </form>
     </div>
